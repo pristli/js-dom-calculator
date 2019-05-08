@@ -5,7 +5,12 @@ const digits = document.querySelectorAll('.digits button');
 digits.forEach( btn => btn.addEventListener('click', digitPressed) );
 function digitPressed(e) {
     e.preventDefault();
-    display.value += e.target.innerText;
+    if (display.value === "error!" ) {
+      display.value = e.target.innerText;
+    }
+    else {
+       display.value += e.target.innerText;
+    }
 }
 const opers = document.querySelectorAll('.opers button');
 opers.forEach( btn => btn.addEventListener('click', operPressed) );
@@ -38,4 +43,8 @@ document.querySelector('.clear').addEventListener('click',clearPressed);
 function clearPressed (e) {
     e.preventDefault();
     display.value = "0";
+}
+
+if (result = "error!" ) {
+    display.value = e.target.innerText;
 }
