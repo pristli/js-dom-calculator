@@ -25,5 +25,12 @@ function isOperetion(char) {
 document.querySelector('.equal').addEventListener('click', equalPressed);
 function equalPressed(e) {
     e.preventDefault();
-    display.value = eval(display.value);
+    let result = eval(display.value);
+    console.log(result);
+    if (result === Infinity) {
+        display.value = "error!";
+    }else {
+        display.value = eval(display.value);
+    }
+    
 }
