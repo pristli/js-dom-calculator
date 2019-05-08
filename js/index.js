@@ -32,5 +32,10 @@ function equalPressed(e) {
     }else {
         display.value = eval(display.value);
     }
-    
+}
+
+document.querySelector('.clear').addEventListener('click',clearPressed);
+function clearPressed (e) {
+    e.preventDefault();
+    display.value = "0";
 }
