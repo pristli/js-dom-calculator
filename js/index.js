@@ -34,7 +34,9 @@ function equalPressed(e) {
     console.log(result);
     if (result === Infinity) {
         display.value = "error!";
-    }else {
+    } else if (result === -Infinity){
+        display.value = "error!";
+    } else {
         display.value = eval(display.value);
     }
 }
